@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { seatIndexAction } from "../../../../../util/Redux/Slice/seatIndexSlice";
@@ -141,11 +141,25 @@ function PopupContent (props) {
       }
     }
 
+  const [checkedInputs, setCheckedInputs] = useState([]);
+  const changeHandler = (checked, id) => {
+    if (checked) {
+      setCheckedInputs([...checkedInputs, id]);
+      checkedInputs.length > 0 && setCheckedInputs(checkedInputs.filter(el => el === id));
+      if(checkedInputs.length > 0) {
+        setCheckedInputs([...checkedInputs, id]);
+        setCheckedInputs(checkedInputs.filter((el) => el === id));
+      }
+    } else {
+      setCheckedInputs(checkedInputs.filter((el) => el !== id));
+    }
+  };
+
   const BodyReturn = () => (
     <>
     {index === 1 &&
     <div>
-      <h2>좌석 선택 <p style={{fontSize : '14px'}}><strong>한번의 한 종류의 좌석만 선택 가능한 점 양해 부탁드립니다.</strong></p></h2>
+      <h2>좌석 선택 <p style={{fontSize : '14px'}}><strong>한 종류의 좌석만 선택 가능한 점 양해 부탁드립니다.</strong></p></h2>
       <div className='seat-container'>
         {seat && seat.map((seats, key) => (
           <table style={{border: 'none'}} key={key}>
@@ -159,14 +173,16 @@ function PopupContent (props) {
             <tbody>
               <tr>
                 <td>{seats.seat}</td>
-                <td>{seats.price}<input className={'check' + key} type='checkbox' onClick={(e) => {
+                <td>{seats.price}<input id={key} onChange={e =>changeHandler(e.currentTarget.checked, key)} 
+                checked={checkedInputs.includes(key) ? true : false}
+                type='checkbox' onClick={e => {
                   // 선택한 좌석의 이름
                   setSeatList(seats.seat);
                   // 필터를 걸쳐 테스트를 통과한 것을 배열로 다시 만들어줌
                   const res = seatIndex.filter(test => test.seat.includes(seats.seat));
                   // 만들어진 배열에서 필요한 값을 추출..
                   setSeatNumber(res[0].index);
-                  setPrice(seats.price);
+                  e.currentTarget.checked ? setPrice(seats.price) : setPrice(0);
                   // 리덕스에 값 저장
                   dispatch(seatIndexAction.setSeatInfo(res[0].index));
                   nextClick();
@@ -284,9 +300,9 @@ function PopupContent (props) {
 
   const FinalModal = props => {
     const { seatNumber, seat, cancelday, hour, minute, title, date, turn, value, ticket, tax, total, userInfo, price } = props;
-    // 가격과 수량을 선택 했을 때만 불려짐 
+    // 가격과 수량을 선택 했을 때만 불려짐
     if(value > 0 && price > 0 && total > 0) {
-    PayReady(title, total, tax, value, seatNumber, userInfo, price);
+      PayReady(title, total, tax, value, seatNumber, userInfo, price);
     }
     const payUrl = window.localStorage.getItem('url');
 
