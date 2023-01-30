@@ -22,7 +22,7 @@
 ### 프로젝트 소개
 뮤지컬, 클래식/무용, 연극, 전시회 예매 사이트
 
-<img src="https://user-images.githubusercontent.com/110091706/215452523-027db0d6-6a42-4564-8c26-ec6896fd8787.jpg" width="600"></img>
+<img src="https://user-images.githubusercontent.com/110091706/215452523-027db0d6-6a42-4564-8c26-ec6896fd8787.jpg" width="800"></img>
 
 
 ###  프로젝트 주요 기능
