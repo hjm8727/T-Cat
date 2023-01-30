@@ -37,7 +37,7 @@
 - 크롤링을 통한 웹 예매 정보 파싱
 
 ### ERD
-// ERD img
+![finalproject](https://user-images.githubusercontent.com/110091878/215450277-51baef22-5940-4404-8840-f923eef7a1c6.png)
 
 
 ### 팀원
