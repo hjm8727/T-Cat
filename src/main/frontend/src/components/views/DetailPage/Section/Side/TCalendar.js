@@ -131,7 +131,12 @@ function TCalendar (props) {
         alert('좌석 또는 수량을 선택해주세요.');
       }
     }
-    const minusIndex = () => setIndex(index-1);
+    const minusIndex = () => {
+      if(!isNext) {
+        setIndex(index-1);
+        setIsNext(true);
+      }
+    } 
 
     // 받아온 예약 가능한 날짜(dim)를 select에 담음
     const [select, setSelect] = useState([]);
