@@ -70,6 +70,7 @@ src/main/frontend/.env.local
 src/main/frontend/.env.development.local
 src/main/frontend/.env.test.local
 src/main/frontend/.env.production.local
+src/main/frontend/.env
 
 src/main/frontend/npm-debug.log*
 src/main/frontend/yarn-debug.log*
