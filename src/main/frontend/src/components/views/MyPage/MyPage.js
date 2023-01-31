@@ -104,22 +104,21 @@ if(!userInfo.userEmail) {
       const res = await MemberApi.searchId(userInfo.userId, userInfo.userProvider_type);
       if(res.data.statusCode === 200) {
         SetInfo(res.data.results);
-        console.log(res.data);
       }
     } catch (e) {
-      console.log(e);
+      alert("정보 조회 실패")
     }
   };
 
+  alert("정보 조회 실패");
   const getInfo2 = async() => {
     try {
       const res = await MemberApi.searchId2(userInfo.userEmail, userInfo.userProvider_type);
       if(res.data.statusCode === 200) {
         SetInfo(res.data.results);
-        console.log(res.data);
       }
     } catch (e) {
-      console.log(e);
+      alert("정보 조회 실패");
     }
   }
     

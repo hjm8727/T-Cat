@@ -31,7 +31,6 @@ const IqList=()=> {
         const res = await MemberApi.myQnalist(userInfo.userIndex, currentPage, pageSize);
         if(res.data.statusCode === 200){
           setQnaList([...qnaList, ...res.data.results.qnaDTOList]);
-          console.log(res.data.results.qnaDTOList[0].index);
           setIndex(res.data.qnaDTOList[0].index);
           // 페이징 시작
           setTotalCount(res.data.results.totalResults); 
@@ -39,12 +38,11 @@ const IqList=()=> {
           setCurrentPage(res.data.results.page);
         }
     }catch (e) {
-        console.log(e);
+        alert("Qna 목록 조회 실패")
       }
     };
     qnaData();
   }, [currentPage]); // currentpage 값이 바뀌면 렌더링 되도록 
-console.log(qnaList);
   return(
     <>
     <Divider>문의 내역</Divider>

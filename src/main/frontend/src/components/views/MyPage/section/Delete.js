@@ -33,7 +33,6 @@ function Delete() {
         }
       } catch(e) {
         alert('회원님의 비밀번호가 일치하지 않습니다.');
-        console.log(e);
       }
     }
   }

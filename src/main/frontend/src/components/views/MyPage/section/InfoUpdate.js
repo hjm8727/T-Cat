@@ -87,11 +87,9 @@ const InfoUpdate = () => {
           setRoad(res.data.results.road);
           setJibun(res.data.results.jibun);
           setPostCode(res.data.results.zipcode);
-          console.log(res.data);
-          console.log(res.data);
         }
       } catch (e) {
-        console.log(e);
+        alert("정보 조회 실패");
       }
     };
   
@@ -108,16 +106,11 @@ const InfoUpdate = () => {
           setRoad(res.data.results.road);
           setJibun(res.data.results.jibun);
           setPostCode(res.data.results.zipcode);
-          console.log(res.data);
-          console.log(res.data);
         }
       } catch (e) {
-        console.log(e);
+        alert("정보 조회 실패");
       }
     }
-
-    console.log(fullAddress);
-    console.log(inputName);
 
   const onChangePwd = e => setInputPwd(e.target.value);
   const onChangeName = e => setInputName(e.target.value);
@@ -138,15 +131,6 @@ const InfoUpdate = () => {
 
   const Navigate = useNavigate();
 
-  console.log(inputId);
-  console.log(inputPwd);
-  console.log(inputName);
-  console.log(inputEmail);
-  console.log(road);
-  console.log(jibun);
-  console.log(address);
-  console.log(postCode);
-
   const onClickChange = async (e) => {
     try {
       const response = await MemberApi.memberUpdate(inputId, inputPwd, inputName, inputEmail, road, jibun, address, postCode, userInfo.userProvider_type);
@@ -156,7 +140,6 @@ const InfoUpdate = () => {
     } catch (e) {
       if(e.response.data.results.statusCode === 400){
         alert("회원 정보가 올바르게 입력되지 않았습니다.")
-        console.log(e.response.data.results)
       }else{
         console.log(e)
       }

@@ -13,12 +13,10 @@ const CList = () => {
       try {
         const res = await PayApi.payCancelSelect(userIndex);
         if(res.data.statusCode === 200) {
-          console.log(res.data);
           setCancelList(res.data.results);
         }
       } catch (e) {
-        console.log(e);
-        console.log('error!!');
+        alert("취소 내역 조회 실패");
       }
     }
     payCancelSelect();

@@ -174,11 +174,8 @@ function Sign() {
    */
   const handlePostCode = (data) => {
     setFullAddress(data.address);
-    console.log(data.roadAddress);
     setRoad(data.roadAddress);
-    console.log(data.jibunAddress);
     setJibun(data.jibunAddress);
-    console.log(data.zonecode);
     setPostCode(data.zonecode);
     setIsOpen(false);
     data.preventDefault();
@@ -245,14 +242,11 @@ function Sign() {
       if(memberRegister.data.statusCode === 200) {
         alert("<Tcat에 회원가입 해주신 것을 진심으로 감사드립니다>");
         Navigate('/login');
-      } else {
-        console.log(memberRegister.data.message);
-      }
+      } 
     } catch (e) {
       if(e.response.data.statusCode === 400){
         alert(e.response.data.message)
       }else{
-        console.log(e);
         console.log("connection fail...");
       }
     }

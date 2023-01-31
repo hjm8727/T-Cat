@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const IqModal = (props) => {
     const navigate = useNavigate();
-    console.log(props.index);
 
     const [inputReply, setInputReply] = useState("");
 

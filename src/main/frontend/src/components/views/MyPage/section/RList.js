@@ -40,12 +40,10 @@ const RList = () => {
       try {
         const res = await PayApi.paySelect(userIndex);
         if(res.data.statusCode === 200) {
-          console.log(res.data);
           setSelectList(res.data.results);
         }
       } catch (e) {
-        console.log(e);
-        console.log('error!!');
+        alert("예매내역 조회 실패");
       }
     }
     paySelect();

@@ -17,8 +17,6 @@ const Contact = () => {
     const onChangeSelect=(e)=>{setInputSelect(e.target.value);}
     const onChangeQnaTitle=(e)=>{setInputQnaTitle(e.target.value);}
     const onChangeQnaContent=(e)=>{setInputQnaContent(e.target.value);}
-    console.log("셀렉트 표시 : " + inputSelect);
-    console.log("회원인덱스 : " + userInfo.userIndex);
 
     const onClickReply=async(e)=>{
         if(inputQnaContent.length <= 5 || inputQnaContent.length >= 1000) {
@@ -27,12 +25,10 @@ const Contact = () => {
     } else {
         const res = await MemberApi.sendQna(userInfo.userIndex,inputSelect,inputQnaTitle,inputQnaContent);
         if(res.data.statusCode === 200) {
-            console.log(res.data.message);
             alert('문의가 정상 전송 되었습니다.');
             navigate('/MyPage/IqList')
         } else {
             alert('문의 전송이 실패 하였습니다.');
-            console.log("전송 실패");
             e.preventDefault();
         }
     }
