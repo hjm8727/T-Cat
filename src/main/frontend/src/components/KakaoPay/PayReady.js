@@ -3,8 +3,8 @@ import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import PayApi from "../../api/PayApi";
-// import { ADMIN_KEY } from "../Config";
 import PayModal from "./PayModal";
+// import { ADMIN_KEY } from "../Config";
 
 // 총 가격, 비과세, 그냥 가격, 수량, 인덱스, 회원 인덱스, 회원 포인트
 

@@ -70,7 +70,6 @@ src/main/frontend/.env.local
 src/main/frontend/.env.development.local
 src/main/frontend/.env.test.local
 src/main/frontend/.env.production.local
-src/main/frontend/.env
 
 src/main/frontend/npm-debug.log*
 src/main/frontend/yarn-debug.log*
@@ -81,3 +80,5 @@ src/main/resources/static/static
 
 src/main/resources/static/index.html
 src/main/resources/static/asset-manifest.json
+
+*.env
