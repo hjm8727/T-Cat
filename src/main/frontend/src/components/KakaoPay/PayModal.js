@@ -57,7 +57,6 @@ const ModalStyle = styled.div`
         text-align: right;
     }
     .close {
-        /* padding: 6px 12px; */
         color: black;
         background-color: #dee2e6;
         border-radius: 5px;
@@ -101,9 +100,6 @@ function FindModal (props) {
             <section>
             <header>
                 {header}
-                {/* <button className="close" onClick={close}>
-                &times;
-                </button> */}
             </header>
             <main>{body}</main>
             <footer className='modal-footer'>

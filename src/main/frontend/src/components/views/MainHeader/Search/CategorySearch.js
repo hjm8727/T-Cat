@@ -20,7 +20,6 @@ const SearchContainer = styled.div`
         padding: 0px;
     }
 
-    /* .InfoContainer{ */
         table{
             margin-top: 40px;
             background-color: white;
@@ -51,7 +50,6 @@ const SearchContainer = styled.div`
         .imgContainer{
             width: 160px;
         }
-    /* } */
     .ButtonContainer{
         display: flex;
         justify-content: center;
@@ -82,11 +80,7 @@ const rankings = [
     {
         name : 'rankingMonth',
         text : '월간랭킹',
-    },
-    // {
-    //     name : 'rankingClose',
-    //     text : '종료임박',
-    // },
+    }
     
 ]
 
@@ -151,13 +145,6 @@ const CategorySearch = () => {
                         setSearchData(res.data.results)
                     }
                 }
-                // else if(ranking === 'rankingClose'){
-                //     const res = await MainApi.rankingArea(category, 20);
-                //     if(res.data.statusCode === 200){
-                //         console.log("종료임박")
-                //         setSearchData(res.data.results)
-                //     }
-                // }
                 else console.log("실패")
             }catch(e){
                 console.log(e);

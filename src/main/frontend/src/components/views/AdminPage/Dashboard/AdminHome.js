@@ -22,7 +22,6 @@ const AdminBlock=styled.div`
 
 const AdminHome=()=>{
 
-
     return(
         <AdminBlock>
         <div className="home">

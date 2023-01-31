@@ -5,7 +5,6 @@ const BackContainer = styled.div`
     img{
         width: 100%;
         height: 40vh;
-        /* min-height: 170px; */
     }
     @media (max-width : 1440px){
         img{

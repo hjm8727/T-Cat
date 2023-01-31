@@ -9,8 +9,6 @@ const PosterImgContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px 0; */
-    /* border: solid 1px black; */
     
     img{
         width: 110px;
@@ -18,20 +16,14 @@ const PosterImgContainer = styled.div`
     }
     ul{
         display: flex;
-        /* width: 100%; */
         list-style: none;
         margin: 0px;
         padding: 0px;
-        /* overflow-x: auto; */
         overflow: hidden;
     }
-    /* ul::-webkit-scrollbar {
-        display: none;
-    } */
     li{
         align-items: center;
         list-style: none;
-        /* display: inline-block; */
         height: 280px;
         margin:0 15px;
     }
@@ -128,7 +120,7 @@ const RankingWeek = () =>{
         }
         PosterAsunc();
     }, [category])
-    // console.log(ItemData)
+
         return(
             <>
                 <PosterCategoryContainer>

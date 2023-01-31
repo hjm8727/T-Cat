@@ -158,10 +158,7 @@ const NoticeBlock=styled.div`
 	max-width:100px;
 }
 .buttonWrap{
-        /* text-align: center; */
-        /* justify-content: center; */
         float: right;
-        /* margin-right: 0; */
     }
   }
     .noticeBtn{
@@ -174,15 +171,13 @@ const NoticeBlock=styled.div`
       height: 35px;
       font-weight: bold;
       font-size: 0.9rem;
-      /* color: #f5f5f5; */
     }
-
 `;
+
 const StyledLink= styled(Link)`
   text-decoration : none;
   color: inherit;
   &:hover{
     color: #92A9BD;
   }
-
 `;

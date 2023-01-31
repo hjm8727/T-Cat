@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import PayApi from "../../api/PayApi";
-import { ADMIN_KEY } from "../Config";
+// import { ADMIN_KEY } from "../Config";
 import PayModal from "./PayModal";
 
 // 총 가격, 비과세, 그냥 가격, 수량, 인덱스, 회원 인덱스, 회원 포인트
@@ -30,13 +30,10 @@ const PayReady = (title, total, tax, value) => {
       tax_free_amount: tax,
       // 결제 성공 URL
       approval_url: "http://tcat.pe.kr/payresult",
-      // approval_url: "https://tcats.tk",
       // 결제 실패 URL
       fail_url: "http://tcat.pe.kr/resultfalse",
-      // fail_url: "https://tcats.tk",
       // 결제 취소 URL
       cancel_url: "http://tcat.pe.kr/resultfalse"
-      // cancel_url: "https://tcats.tk",
   }
   });
 
@@ -47,7 +44,7 @@ const PayReady = (title, total, tax, value) => {
           url: "https://kapi.kakao.com/v1/payment/ready",
           method: "POST",
           headers: {
-              Authorization: `KakaoAK ${ADMIN_KEY}`,
+              Authorization: `KakaoAK ${process.env.REACT_APP_ADMIN_KEY}`,
               "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
               },
               params,
@@ -122,7 +119,7 @@ const PayReady = (title, total, tax, value) => {
             url: "https://kapi.kakao.com/v1/payment/approve",
             method: "POST",
             headers: {
-                Authorization: `KakaoAK ${ADMIN_KEY}`,
+                Authorization: `KakaoAK ${process.env.REACT_APP_ADMIN_KEY}`,
                 "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
             },
             params,
@@ -209,7 +206,7 @@ const PayReady = (title, total, tax, value) => {
       setModalOpen(false);
       navigate('/', {replace:true});
     }
-   
+
     // 공연 시작일
     const viewTime = ticket.view_time;
     const today = new Date();
@@ -309,7 +306,7 @@ const PayReady = (title, total, tax, value) => {
             url: "https://kapi.kakao.com/v1/payment/cancel",
             method: "POST",
             headers: {
-                Authorization: `KakaoAK ${ADMIN_KEY}`,
+                Authorization: `KakaoAK ${process.env.REACT_APP_ADMIN_KEY}`,
                 "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
             },
             params,

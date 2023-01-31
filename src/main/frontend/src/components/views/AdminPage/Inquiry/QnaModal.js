@@ -153,7 +153,7 @@ const QnaModal = (props) => {
                     </main>
                     <footer>
                         <button className='submit' onClick={onClickReply}>Submit</button>
-                        <button className='close' onClick={close}>close</button>
+                        <button className='close' onClick={close}>Close</button>
                     </footer>
                 </section>
             }

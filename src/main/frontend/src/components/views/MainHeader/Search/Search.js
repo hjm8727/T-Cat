@@ -114,7 +114,6 @@ const Search = () =>{
             setNowLoading(true);
             try{
                 const res = await MainApi.mainsearch(text)
-                // console.log(res.data)
                 if(res.data.statusCode === 200){
                     console.log("성공")
                     setSearchData(res.data.results.content);
@@ -192,4 +191,4 @@ const Search = () =>{
     )
 }
 
-export default Search
+export default Search;

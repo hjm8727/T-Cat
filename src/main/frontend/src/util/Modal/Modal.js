@@ -19,7 +19,7 @@ const Modal = (props) => {
                     {submit &&
                         <button className='submit' onClick={submit}>Submit</button>
                     }
-                        <button className='close' onClick={close}>close</button>
+                        <button className='close' onClick={close}>Close</button>
                     </footer>
                 </section>
             }

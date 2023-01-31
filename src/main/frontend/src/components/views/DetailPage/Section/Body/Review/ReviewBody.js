@@ -92,7 +92,7 @@ const ReviewBody=(props)=>{
                   index={index}
                   memberIndex={memberIndex}
                   title={title}
-                   />}
+                  />}
                   {/* <Form.Label className="review-like">{like}</Form.Label> */}
               </div>
             </div>
@@ -107,7 +107,7 @@ const ReviewBody=(props)=>{
               )}
           </div>
           <Alert.Heading className="review-title">{title}</Alert.Heading>
-           <p className="review-content">{content}</p>
+          <p className="review-content">{content}</p>
           <hr/>
           <ChildReview 
           child_comment_list={child_comment_list} 
@@ -118,9 +118,9 @@ const ReviewBody=(props)=>{
         ))}
         <Pagination className="reply-pagination"
              total={totalCount}  //총 데이터 갯수
-             current={currentPage}
-             pageSize={pageSize}
-             onChange={(page) => {setCurrentPage(page); 
+              current={currentPage}
+              pageSize={pageSize}
+              onChange={(page) => {setCurrentPage(page); 
               setReviewList2([]);}} //숫자 누르면 해당 페이지로 이동
             />
         </ReviewBodyBlock>
@@ -137,7 +137,6 @@ const ReviewBodyBlock = styled.div`
   overflow: hidden;
 }
 .review-head-container{
-  /* display: flexbox; */
   justify-content: space-between;
 
 }
@@ -146,7 +145,6 @@ const ReviewBodyBlock = styled.div`
   .review-id,.review-like{
     margin-right: 20px;
   }
-  /* justify-content: space-between; */
 }
 .review-title{
   width: 90%;
@@ -173,7 +171,6 @@ hr{
   margin-left: 7px;
   border: none;
   color: red;
-
 }
 .reply-pagination{
   

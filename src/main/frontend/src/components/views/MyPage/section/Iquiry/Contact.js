@@ -37,7 +37,7 @@ const Contact = () => {
         }
     }
 }
-// const data=["티켓예매/발권", "취소/환불", "신고"];
+
     return (
         <Form
             labelCol={{span: 4,}}

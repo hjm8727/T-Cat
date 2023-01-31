@@ -48,7 +48,6 @@ const Inquiry=(props)=>{
   return(
     <InquiryBlock>
         <TopBar name="큐앤에이 관리"/>
-        {/* <p>{qnaList[5].qnaStatus}</p> */}
           <div className="admin-qnalist-container">
           <Table bordered hover>
                 <thead style={{backgroundColor : '#f5f5f5'}}>
@@ -69,8 +68,8 @@ const Inquiry=(props)=>{
                     <td>{qnaList.id}</td>
                     <td>{qnaList.createTime}</td>
                     {qnaList.qnaStatus === '응답 완료' 
-                     ? <td style={{color : "black"}}>{qnaList.qnaStatus}</td> 
-                     : <td style={{backgroundColor : "#92A9BD"}}>{qnaList.qnaStatus}</td> 
+                    ? <td style={{color : "black"}}>{qnaList.qnaStatus}</td> 
+                    : <td style={{backgroundColor : "#92A9BD"}}>{qnaList.qnaStatus}</td> 
                     }
                     <td>
                       {qnaList.reply === null && (
@@ -104,11 +103,11 @@ const Inquiry=(props)=>{
 
             <Pagination className="d-flex justify-content-center"
              total={totalCount}  //총 데이터 갯수
-             current={currentPage} 
-             pageSize={pageSize}
+              current={currentPage} 
+              pageSize={pageSize}
              onChange={(page) => {setCurrentPage(page); setQnaList([]);}} //숫자 누르면 해당 페이지로 이동
-             />
-             </div>
+              />
+              </div>
         </InquiryBlock>
     );
 }

@@ -50,4 +50,4 @@ const MainBanner = () =>{
     )
 }
 
-export default MainBanner
+export default MainBanner;

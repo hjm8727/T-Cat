@@ -133,13 +133,11 @@ function Sign() {
 
   // 모달 스타일
   const postCodeStyle = {
-    // display: "block",
     position: "absolute",
     top : "20%",
     left : "35%",
     width: "500px",
-    height: "500px",
-    // padding: "7px",
+    height: "500px"
   };
 
   // 카카오주소 api

@@ -60,9 +60,9 @@ const AccuseModal= (props)=> {
             </header>
             <main>
             <Form.Select value={reason} onChange={onChangeSelect}>
-                 <option value="광고">광고</option>
-                 <option value="욕설">욕설</option>
-                 <option value="기타">기타</option>
+                <option value="광고">광고</option>
+                <option value="욕설">욕설</option>
+                <option value="기타">기타</option>
             </Form.Select>
                 {/* {body} */}
             </main>
@@ -173,5 +173,4 @@ const AccuseModalBlock=styled.div`
             opacity: 1;
         }
     }
-
 `;

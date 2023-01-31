@@ -72,7 +72,6 @@ const RecentWrap = styled.div`
     overflow:hidden;
     padding-top: 40px;
     font-family: sans-serif;
-    /* white-space: nowrap; */
 }
 .MainReviewContents{
     border: 1px solid silver;
@@ -91,8 +90,6 @@ li{
 }
 .minititle{
     margin: auto 0;
-    /* text-align: center; */
-    /* opacity: 90%; */
     font-size: 18px;
     font-weight: bolder;
     text-overflow: ellipsis;
@@ -121,11 +118,10 @@ li{
   height: 50px;
 }
 img{
-        width: 130px;
-        height: 160px;
+    width: 130px;
+    height: 160px;
     }
 .first-comment-container{
-  /* justify-content: baseline,; */
   display: flex;
 }
 .review-image-container{
@@ -141,9 +137,5 @@ img{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-
 }
-
-
 `

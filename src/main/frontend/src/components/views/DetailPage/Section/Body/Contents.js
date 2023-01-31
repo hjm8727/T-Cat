@@ -5,7 +5,6 @@ import { FcBusinessman,FcBusinesswoman } from "react-icons/fc";
 // 공연 정보
 function Contents(props) {
 
-
   const data = [
     {
       10: props.stat.teen,
@@ -38,10 +37,6 @@ function Contents(props) {
         <BarChart 
           data={data}
           margin={{
-            // top: 10,
-            // right: 30,
-            // left: 20,
-            // bottom: 5,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />

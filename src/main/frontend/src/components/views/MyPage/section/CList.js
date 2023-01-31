@@ -3,8 +3,6 @@ import { Table, Divider } from 'antd';
 import { useSelector } from 'react-redux';
 import PayApi from '../../../../api/PayApi';
 
-// 컬럼명 맞춰서 API 문서 만들면 됨
-
 const CList = () => {
   
   const userIndex = useSelector((state) => state.user.info.userIndex);

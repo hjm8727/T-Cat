@@ -32,7 +32,6 @@ const MyInfoStyle = styled.div`
     border: 1px solid black;
     width: 50%;
     min-width: 660px;
-    /* height: 350px; */
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -62,7 +61,6 @@ const MyInfoStyle = styled.div`
 }
   .MypageMainContainer{
     height : 100%;
-    /* width: 65%; */
   }
   .MypageDataContainer{
     width: 50%;
@@ -85,7 +83,7 @@ function MyPage() {
 
 if(!userInfo.userEmail) {
   alert("로그인 후 이용해주세요.")
-   document.location.href="http://www.tcat.pe.kr"
+  document.location.href="http://tcat.pe.kr"
 } 
 
   const { Content, Sider } = Layout;
@@ -156,7 +154,6 @@ if(!userInfo.userEmail) {
     <MainHeader/>
     <Layout>
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{minHeight: 'auto'}}>
-        {/* <div className="logo" /> */}
         <Menu theme="dark" mode="inline" items={items} onClick={({key}) => navigate(key)}/>
       </Sider>
       <Layout className="site-layout">
@@ -170,7 +167,7 @@ if(!userInfo.userEmail) {
                 </div>
                   <div className='info-des'>
                     <div className='description'>
-                      <h4><strong>{info.name}</strong>님 오늘도 TCat을 방문해주셔 감사합니다. 좋은 하루 되세요</h4>
+                      <h4><strong>{info.name}</strong>님 오늘도 T-Cat을 방문해주셔 감사합니다. 좋은 하루 되세요</h4>
                       <p>나의 아이디는 {info.id}</p>
                       <p>나의 이메일은 {info.email}</p>
                       <p>현재 회원님의 포인트는 {info.point}</p>

@@ -19,8 +19,6 @@
     font-size: 25px;
     font-weight: bold;  
     margin-right: 30px;
-    /* text-align: center; */
-    /* justify-content: center; */
 }
 .featuredContainer{
     margin: 10px 0;
@@ -34,7 +32,6 @@
 }
 .featured-content{
     float: right;
-    /* display: inline-block; */
 }
 .featureIcon{
     margin: auto 0;

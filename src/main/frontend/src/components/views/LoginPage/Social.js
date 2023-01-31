@@ -116,13 +116,11 @@ const SignWrap = styled.div`
 } 
 `
 const postCodeStyle = {
-    // display: "block",
     position: "absolute",
     top : "5%",
     left : "35%",
     width: "500px",
-    height: "500px",
-    // padding: "7px",
+    height: "500px"
 };
 
 function Social() {
@@ -134,7 +132,6 @@ function Social() {
     const [address, setAddress] = useState('');
     const [inputEmail, setInputEmail] = useState('');
     const [type, setType] = useState('');
-    // const [Join, setJoin] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [isName, setIsName] = useState(false);
 
@@ -146,15 +143,12 @@ function Social() {
         console.log(inputName)
         setInputEmail(params.get('email'));
         console.log(inputEmail);
-        // setJoin('isJoin');
-        // console.log(Join);
         setType(params.get('providerType'));
         console.log(type);
-        // const name = params.get('name')
         const email = params.get('email')
         const provider_type = params.get('providerType')
         const join = params.get('isJoin');
-        if(join == 1) {
+        if(join === 1) {
             const getInfo = async() => {
                 try {
                     const res = await MemberApi.searchId2(email, provider_type);

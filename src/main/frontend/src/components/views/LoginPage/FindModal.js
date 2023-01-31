@@ -55,7 +55,6 @@ const ModalStyle = styled.div`
         text-align: right;
     }
     .close {
-        /* padding: 6px 12px; */
         color: black;
         background-color: #dee2e6;
         border-radius: 5px;

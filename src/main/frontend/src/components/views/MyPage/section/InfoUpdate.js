@@ -40,13 +40,11 @@ const InfoStyle = styled.div`
   }
 `
 const postCodeStyle = {
-  // display: "block",
   position: "absolute",
   top : "16%",
   left : "42%",
   width: "500px",
-  height: "500px",
-  // padding: "7px",
+  height: "500px"
 };
 
 const InfoUpdate = () => {

@@ -7,11 +7,9 @@ const MainReviewContainer = styled.div`
     width: 100%;
     margin: 40px 0;
     .ReviewBox{
-
         margin: 20px 0;
     }
     .MainReviewContents{
-        /* border: 1px solid black; */
         border: 1px solid silver;
         margin: 0 5px;
     }
@@ -96,7 +94,6 @@ const MainReview = () =>{
         setIsFinish(false)
     },[])
 
-    // console.log(reviewItem);
 
     return(
         <MainReviewContainer>
@@ -104,7 +101,7 @@ const MainReview = () =>{
                 <h2>관람 후기</h2>
             </div>
             <div className="ReviewBox">
-                {/* 아이탬 */}
+                {/* 아이템 */}
                 {isFinish && reviewItem.map ((reviewItem , index) =>(
                     <ul className="itemInfoContainer" key={index}>
                         <div style={{display :'flex'}}>
@@ -129,21 +126,8 @@ const MainReview = () =>{
                     </ul>
                         ))}
             </div>
-            {/* <div className="ReviewBox">
-            {isFinish && reviewItem.map ((reviewItem , index) => (
-                <>
-                    <li className="MainReviewContents" key={index}>
-                        <p className="minititle">{reviewItem.title}</p>
-                        <p>{reviewItem.memberId} 님의 작성 내용입니다.</p><span>{reviewItem.rate}</span>
-                        <div className="ReviewContents">
-                            <p className="con">{reviewItem.content}</p>
-                        </div>
-                    </li>
-            </>
-            ))}
-            </div> */}
         </MainReviewContainer>
     )
 }
 
-export default MainReview
+export default MainReview;

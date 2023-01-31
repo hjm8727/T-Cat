@@ -15,7 +15,6 @@ const BodyContainer = styled.div`
         width: 500px;
         max-width: 500px;
         overflow: hidden;
-        /* border-bottom:1px solid silver; */
         margin:5px 0;
         white-space: normal;
         word-wrap: break-word;
@@ -34,37 +33,10 @@ const BodyContainer = styled.div`
         text-overflow: ellipsis;
         overflow:hidden;
         white-space: nowrap;
-        /* border-bottom:1px solid silver; */
     }
     
 `
-// const notice = [
-//     {
 
-//         id : '1',
-//         categories : 'Notice',
-//         title : "1번공지",
-//         text : '2번 공지사항 내용입니다.2번 공지사항 내용입니다.2번 공지사항 내용입니다.2번 공지사항 내용입니다.2번 공지사항 내용입니다.2번 공지사항 내용입니다.'
-//     },
-//     {
-//         id : '2',
-//         categories : 'Notice',
-//         title : "2번공지",
-//         text : '2번 공지사항 내용입니다.'
-//     },
-//     {
-//         id : '3',
-//         categories : 'Event',
-//         title : "3번공지",
-//         text : '3번 이벤트 내용입니다.'
-//     },
-//     {
-//         id : '4',
-//         categories : 'Event',
-//         title : "4번공지",
-//         text : '4번 이벤트 내용입니다.'
-//     },
-// ]
 
 const NoticeModalBody = () => {
     const [modalOpen, setModalOpen] = useState(false);

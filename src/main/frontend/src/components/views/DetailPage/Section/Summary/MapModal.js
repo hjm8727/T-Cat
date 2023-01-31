@@ -1,5 +1,4 @@
 
-/*global kakao*/
 import styled from "styled-components"
 import { useEffect, useState } from "react"
 
@@ -31,7 +30,7 @@ const MapModalBody = (props) =>{
 
     const getLocation = () => {
         fetch(`https://dapi.kakao.com/v2/local/search/address.json?analyze_type=similar&page=1&size=10&query=${loactionObj}`, {
-            headers: { Authorization: "KakaoAK 934ae165a79158f678f698486cff5269" },
+            headers: { Authorization: `KakaoAK ${process.env.REACT_APP_REST_API_KEY}` },
             method: 'GET'
         })
         .then(res => res.json())

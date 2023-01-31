@@ -74,7 +74,7 @@ const BlackList=()=>{
             alert(res.data.message);
             navigate(0);
           }
-       }
+      }
       catch(e){
         console.log(e);
     } 

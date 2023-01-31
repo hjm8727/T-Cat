@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {QuestionCircleOutlined, ClockCircleOutlined, DollarCircleOutlined, UserOutlined, SendOutlined, NotificationOutlined,} from "@ant-design/icons";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Modal from "../../../../../util/Modal/Modal";
 import { useState } from "react";
 import AnswerModalBody from "./IconModal/ModalBody/AnswerModalBody";
@@ -10,7 +10,6 @@ import CancelModalBody from "./IconModal/ModalBody/CancelModalBody";
 import { useSelector } from "react-redux";
 
 const MainIconContainer = styled.div`
-    /* border: 1px solid black; */
     width: 100%;
     margin: 40px 0;
     .IconAllContainer{
@@ -32,7 +31,6 @@ const MainIconContainer = styled.div`
         margin-top: 5px;
         color:#33333b;
         cursor: pointer;
-        /* min-width: 64px; */
     }
     h2{
         margin:0px;

@@ -14,8 +14,8 @@ import Contents from './Section/Body/Contents';
 import GridCards from '../Cards/GridCards';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import ReviewBody from './Section/Body/ReviewTest/ReviewBody';
-import WriteReview from './Section/Body/ReviewTest/WriteReview';
+import ReviewBody from './Section/Body/Review/ReviewBody';
+import WriteReview from './Section/Body/Review/WriteReview';
 import NoImage from '../../../util/NoImage';
 
 const { Content, Sider } = Layout;
@@ -24,7 +24,6 @@ const DWrap = styled.div`
 width: 100%;
 background-color: #d2d2d2;
 min-width: 930px;
-/* border: 1px solid black; */
 .DetailContainer{
   width: 80%;
   margin:0 auto;
@@ -32,7 +31,6 @@ min-width: 930px;
 }
 .detailInfoContainer{
   img{
-    /* margin-left: 20px; */
     padding: 20px;
     width: 69%;
   }
@@ -68,9 +66,6 @@ min-width: 930px;
   height: auto;
   position: fixed; 
   left: 73%;
-  /* top: 6.5rem; */
-  /* bottom: 0; */
-  /* bottom: 200px; */
   top : 100px;
   padding-bottom: 10px;
 
@@ -172,7 +167,6 @@ function Detail() {
           setDateList(res.data.results.calendar_list[0]);
           console.log(res.data.results.calendar_list);
           setOpen(true);
-          // setContent(res.data.results.compact_list.detail_poster_url);
         } else {
           alert("데이터 조회가 실패.")
           console.log("에러...");
@@ -286,7 +280,6 @@ function Detail() {
             }
             </Tab>
             
-  
             <Tab eventKey="profile" title="관람후기" style={{marginBottom : '150px'}}>
               <WriteReview code={comList.code}/>
               <ReviewBody reviewList={reviewList}

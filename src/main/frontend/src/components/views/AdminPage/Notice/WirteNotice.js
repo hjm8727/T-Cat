@@ -90,7 +90,6 @@ const WriteBlock=styled.div`
             padding-top: 20px;
             resize: none;
             border-radius: 5px;
-            /* border: #f5f5f5 4px; */
         }
     }
     .buttonWrap{

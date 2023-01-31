@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import AdminApi from "../../../../../api/AdminApi";
 
 const MainNoticeContainer = styled.div` 
@@ -95,4 +95,4 @@ const MainNotice = () =>{
     )
 }
 
-export default MainNotice
+export default MainNotice;

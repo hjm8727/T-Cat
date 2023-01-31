@@ -10,8 +10,6 @@ const PosterImgContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 0px 30px; */
-    /* border: solid 1px black; */
     overflow-x: auto;
     overflow-y: hidden;
     img{
@@ -20,7 +18,6 @@ const PosterImgContainer = styled.div`
     }
     ul{
         display: flex;
-        /* width: 100%; */
         list-style: none;
         margin: 0px;
         padding: 0px;
@@ -28,7 +25,6 @@ const PosterImgContainer = styled.div`
     li{
         align-items: center;
         list-style: none;
-        /* display: inline-block; */
         height: 280px;
         margin:0 15px;
     }

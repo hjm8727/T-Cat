@@ -19,7 +19,6 @@ const ItemContainer = styled.div`
     margin: 0 auto;
     min-width: 930px;
     margin-bottom: 40px;
-    /* background-color: #f5f5f7; */
     hr{
         margin: 0;
     }
@@ -101,13 +100,10 @@ const MainPage = () =>{
             <MainHeader/>
                 <ContentWarp/>
                     <ItemContainer>
-                        
                         <MainPoster/>
                         <MainNotice/>
-                        {/* <hr></hr> */}
                         <MainBanner/>
                         <RankingArea/>
-
                         <MainReview/>
                         <hr></hr>
                         <MainIcon/>

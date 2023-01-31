@@ -63,7 +63,7 @@ const ChildReview=(props)=>{
           if(e.response.data.code === 'C001'){
             alert("로그인 후 이용 바랍니다.")
           } else{
-           console.log(e);
+          console.log(e);
         }
       }
     }
@@ -77,9 +77,8 @@ const ChildReview=(props)=>{
       <div>
         <div className="sec-input-container">
         <Form.Control type="text" placeholder="Enter Reply" value={inputContent} onChange={onChangeContent}/>
-         <Button className="child-submit-btn" variant="dark" 
-           onClick={onClickSubmit}>
-              등록
+          <Button className="child-submit-btn" variant="dark" onClick={onClickSubmit}>
+            등록
           </Button>
         </div>
       {props.child_comment_list&&props.child_comment_list.map((reply,index)=>

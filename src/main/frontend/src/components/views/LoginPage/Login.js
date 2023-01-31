@@ -13,12 +13,10 @@ const LoginWrap = styled.div`
   background: url(https://images.unsplash.com/photo-1512389055488-8d82cb26ba6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzbWFzJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
   background-size: contain;
   font-weight: bold;
-  /* background-color: #d2d2d2; */
   .loginwrap{
     min-height: 100vh;
     margin: 0 auto;
     width: 70%;
-    /* background-color: #f5f5f5; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +92,6 @@ const LoginWrap = styled.div`
     color: #86868b;
   }
   input:hover{
-    /* background-color: #86868b; */
   } 
   button:hover{
     color: black;

@@ -47,7 +47,6 @@ const MainPoster2Container = styled.div`
         font-size: 1.2em;
     }
     .PosterName{
-        /* font-size: 1em; */
         opacity: 80%;
     }
     img{
@@ -56,15 +55,12 @@ const MainPoster2Container = styled.div`
     }
     ul{
         width: 100%;
-        /* overflow: hidden; */
         display: flex;
-        /* justify-content: space-between; */
         margin: 0 20px;
         padding: 0;
         list-style: none;
     }
     li{   
-        /* margin: 0 20px; */
         list-style: none;
         width: 230px;
         margin: 0 5px;
@@ -89,7 +85,6 @@ const MainPoster2Container = styled.div`
             height: 290px;
         }
         li{
-            /* margin: 0 5px; */
             width: 270px;
         }
     }
@@ -112,11 +107,7 @@ const area = [
     {
         regionCode : '3',
         text : '부산'
-    },
-    // {
-    //     regionCode : '4',
-    //     text : '경남'
-    // },
+    }
     
 ]
 
@@ -178,4 +169,4 @@ const RankingArea = () =>{
 )
 }
 
-export default RankingArea
+export default RankingArea;

@@ -52,7 +52,7 @@ const NoticeDetail=()=>{
                       <p className="notice-detail-title">{noticeDetail.title}</p>
                   </div>
                 </div>
-                  <div className="notice-detail-content">{noticeDetail.content}</div>
+                  <textarea className="notice-detail-content">{noticeDetail.content}</textarea>
               </div>
                 <div className="buttonWrap">
                     <button className="noticeBtn" onClick={()=>{navigate('/admin/noticeList')}}>목록으로</button>
@@ -77,7 +77,6 @@ const DetailBlock=styled.div`
     border: 1px solid black;
     height: 60%;
     flex-direction: column;
-    text-align: center;
     padding: 3rem;
     }
     .notice-detail-titlebox{
@@ -87,7 +86,6 @@ const DetailBlock=styled.div`
         border-bottom: 1px solid #dae0e9;
         height: 90px;
         padding: 0 20px;
-        /* width: 80%; */
         line-height: 70px;
     }
     .notice-detail-date{
@@ -97,10 +95,10 @@ const DetailBlock=styled.div`
     }
     .notice-detail-content{
         margin-top : 20px;
-        /* display: block; */
         height: 500px;
         border-bottom: 1px solid #dae0e9;
         overflow: hidden;
+        resize: none;
     }
     .buttonWrap{
         text-align: center;

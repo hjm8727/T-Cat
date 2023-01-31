@@ -145,7 +145,6 @@ const PostBlock=styled.div`
 	overflow:hidden;
 	white-space:nowrap;
 	text-overflow:ellipsis;
-	/* max-width:100px;?} */
   }
 }
   .post-btn-container{

@@ -98,7 +98,6 @@ const Styleside = styled.div`
         text-align: center;
         box-sizing: border-box;
         color: #fff;
-        /* margin-top: 1rem; */
         font-size: 18px;
     }
     .remain {
