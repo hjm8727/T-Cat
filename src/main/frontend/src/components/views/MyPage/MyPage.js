@@ -106,11 +106,11 @@ if(!userInfo.userEmail) {
         SetInfo(res.data.results);
       }
     } catch (e) {
-      alert("정보 조회 실패")
+      console.log(e);
     }
   };
 
-  alert("정보 조회 실패");
+  console.log(e);
   const getInfo2 = async() => {
     try {
       const res = await MemberApi.searchId2(userInfo.userEmail, userInfo.userProvider_type);
@@ -118,7 +118,7 @@ if(!userInfo.userEmail) {
         SetInfo(res.data.results);
       }
     } catch (e) {
-      alert("정보 조회 실패");
+      console.log(e);
     }
   }
     

@@ -89,7 +89,7 @@ const InfoUpdate = () => {
           setPostCode(res.data.results.zipcode);
         }
       } catch (e) {
-        alert("정보 조회 실패");
+        console.log(e);
       }
     };
   
@@ -108,7 +108,7 @@ const InfoUpdate = () => {
           setPostCode(res.data.results.zipcode);
         }
       } catch (e) {
-        alert("정보 조회 실패");
+        console.log(e);
       }
     }
 
