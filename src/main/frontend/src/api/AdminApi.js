@@ -32,7 +32,6 @@ const AdminApi={
         for(var i=0; i<arrItems.length; i++){
             arrKeys.push({"index":arrItems[i]});
         }
-        console.log("삭제할 공지 갯수 : " + arrKeys);
         // debugger;
         const params = {
             checkDTOList: arrKeys
@@ -63,7 +62,6 @@ const AdminApi={
     for(var i=0; i<arrItems.length; i++){
         arrKeys.push({"index":arrItems[i]});
     }
-    console.log("삭제할 체크멤버 : " + arrKeys);
     // debugger;
     const params = {
         memberDTOCheckList: arrKeys
@@ -76,7 +74,6 @@ const AdminApi={
     },
     // qna 관리자 답장
     qnaReply : async function(inputReply, index) {
-        console.log(inputReply);
         const params = {
             reply : inputReply,
             index : index

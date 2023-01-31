@@ -73,7 +73,6 @@ const MemberApi = {
   },
   // qna 전송하기
   sendQna : async function(memberIndex,inputSelect,inputQnaTitle,inputQnaContent) {
-    console.log("문의 값: " +memberIndex, inputSelect,inputQnaTitle, inputQnaContent );
     // debugger;
     const params = {
       index : memberIndex,

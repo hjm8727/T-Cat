@@ -13,10 +13,8 @@ const RecentComment=()=>{
     const reviewData = async()=> {
       try {
         const res = await AdminApi.recentReview();
-        console.log("데이터 값 : " + res.data.results);
         if(res.data.statusCode === 200){
           setReviewList(res.data.results);
-          console.log(res.data.results);
         }
       }catch(e){
         console.log(e);

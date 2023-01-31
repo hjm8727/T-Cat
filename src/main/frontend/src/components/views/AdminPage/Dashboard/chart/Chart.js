@@ -25,7 +25,6 @@ const Chart = (props) => {
           const res = await AdminApi.getChart();
           if(res.data.statusCode === 200){
             setChartData([...chartData, ...res.data.results]);
-            console.log(res.data.results);
             if(chart.length === 0) {
               const mapChart = chartData.reverse().map((data) => {
                 return {
@@ -43,7 +42,6 @@ const Chart = (props) => {
       }
       getChartData();
   }, [chart]);
-  console.log(chart);
 
     return (
         <ChartBlock>

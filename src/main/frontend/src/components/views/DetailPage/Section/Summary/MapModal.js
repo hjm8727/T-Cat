@@ -26,7 +26,6 @@ const { kakao } = window;
 const MapModalBody = (props) =>{
     const [loactionObj, setLocationObj] = useState(props.loc2);
     const [mapL, setMapL] = useState('');
-    console.log(props.loc2);
 
     const getLocation = () => {
         fetch(`https://dapi.kakao.com/v2/local/search/address.json?analyze_type=similar&page=1&size=10&query=${loactionObj}`, {

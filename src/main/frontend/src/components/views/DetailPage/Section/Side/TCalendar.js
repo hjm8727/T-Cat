@@ -213,7 +213,6 @@ function TCalendar (props) {
       const onClickTurn = e => {
         const name = e.target.name;
         if(name === 'turn1') {
-          console.log(e.target.className);
           setTurn(1);
         } else if(name === 'turn2') {
           setTurn(2);
@@ -237,7 +236,6 @@ function TCalendar (props) {
             isCasting && setIsTimeCasting(res.data.results.check_list.is_info_time_casting);
           } else {
             console.log('error');
-            console.log(res);
           }
         }
         changeReserveMonth();
@@ -254,12 +252,10 @@ function TCalendar (props) {
             let response = res.data.results.reserve_list
             // 회차 리스트
             setReserveList(response);
-            console.log(res);
             setHour(response.map((cd) => cd.hour));
             setMinute(response.map((cd) => cd.minute));
           } else {
             console.log('error');
-            console.log(res);
           }
         }
         chagneReserveDay();

@@ -135,9 +135,6 @@ const MainHeader = () =>{
     // 확인용
     const userInfo = useSelector((state) => state.user.info)
 
-    console.log(userInfo);
-    // console.log(categoryvalue);
-
     return(
         <>
             <HeaderContainer>

@@ -133,7 +133,6 @@ const RankingArea = () =>{
         PosterAsunc();
     }, [regionCode])
 
-    console.log(ItemData);
     return(
         <>
             <PosterCategoryContainer>

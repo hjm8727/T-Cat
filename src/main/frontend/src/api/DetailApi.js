@@ -6,7 +6,6 @@ const TCAT_DOMAIN = "http://tcat.pe.kr";
 const DetailApi={
     //  관람 후기 작성(부모댓글=후기)
     sendComment : async function(memberIndex,inputTitle, inputContent, rate, productCode){
-        console.log("후기 작성 찍히는 값 : " + memberIndex,inputTitle, inputContent, rate, productCode);
         const params = {
             memberIndex : memberIndex,
             title : inputTitle,
@@ -18,7 +17,6 @@ const DetailApi={
     },
     // 대댓글 작성(자식댓글)
     childComment : async function(memberIndex,group,inputContent,productCode){
-        console.log("댓글 코드 " + memberIndex,group,inputContent,productCode);
         // debugger;
         const params = {
             memberIndex : memberIndex,
@@ -39,7 +37,6 @@ const DetailApi={
     },
     // 후기 삭제 
     deleteComment : async function(commentIndex, memberIndex){
-        console.log("삭제 api 찍힌 값 : " + commentIndex, memberIndex);
         // debugger;
         const params = {
             index : commentIndex, // 후기(댓글) 고유 index 값 
@@ -54,7 +51,6 @@ const DetailApi={
     },
     // 후기 신고하기
     accuseComment : async function(suspectIndex,victimIndex,reason,reviewIndex,){
-        console.log("신고 api 찍힌값 : " + suspectIndex,victimIndex,reason,reviewIndex,);
         // debugger;
         const params = {
             memberIndexSuspect : suspectIndex, // 신고당한사람 (글작성자)

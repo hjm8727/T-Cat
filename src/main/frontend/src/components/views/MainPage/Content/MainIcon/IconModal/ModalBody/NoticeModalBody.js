@@ -58,14 +58,13 @@ const NoticeModalBody = () => {
         const asyncFunction = async()=>{
             try{
                 const res = await AdminApi.noticeInfo(currentPage ,pageSize);
-                console.log('test')          
                 if(res.data.statusCode === 200){
                     SetNotice(res.data.results.noticeDTOList);
                     setCurrentPage(res.data.results.page);
                     setTotalCount(res.data.results.totalResults);
                 }
             }catch(e){
-                console.log(e);
+                alert("공지사항 조회 실패");
             }           
         }
     asyncFunction();

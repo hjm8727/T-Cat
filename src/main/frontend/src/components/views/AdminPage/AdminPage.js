@@ -35,7 +35,6 @@ const HeaderBlock=styled.div`
 function AdminPage() {
   const userInfo = useSelector((state) => state.user.info);
   const Navigate = useNavigate();
-  console.log(userInfo.userRole);
 
   useEffect(() => {
       if(userInfo.userRole !== "ROLE_ADMIN") {

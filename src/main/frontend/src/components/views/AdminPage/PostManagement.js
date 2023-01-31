@@ -22,7 +22,6 @@ const PostManagement=()=>{
     if (checked) {
       // 단일 선택 시 체크된 아이템을 배열에 추가
       setCheckItems(prev => [...prev, obj]);
-      console.log(obj); // 아래에서 index 값을 받은거라 index 값 찍힘
     } else {
       // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
       setCheckItems(checkItems.filter((el) => el !== obj));
@@ -36,7 +35,6 @@ const PostManagement=()=>{
       const idArray = [];
       list.forEach((el) => idArray.push(el.code));
       setCheckItems(idArray);
-      console.log(idArray);
     }
     else {
       setCheckItems([]);
@@ -49,7 +47,6 @@ const PostManagement=()=>{
           const res = await AdminApi.exhibitionList(currentPage, pageSize);
           if(res.data.statusCode === 200){
             setList([...list, ...res.data.results.productDTOList]);
-            console.log(res.data.results);
             // 페이징 시작
             setTotalCount(res.data.results.totalResults); 
             // db에서 잘라준 size 별로 잘랐을때 나온 페이지 수
@@ -71,12 +68,9 @@ const PostManagement=()=>{
         alert("체크박스 한개 이상 체크해주세요");
         navigate(0);
       } else{
-        console.log(checkItems);
         const res = await AdminApi.noticeCheck(checkItems);
-        console.log(res.data);
         alert("선택하신 공지사항이 삭제되었습니다.");
         try{
-          console.log("통신넘어가나? :" + res.data);
           navigate(0);
         }catch(e){
           console.log(e);

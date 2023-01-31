@@ -8,9 +8,6 @@ const AccuseModal= (props)=> {
     const userInfo = useSelector((state) => state.user.info)
     const victimIndex= userInfo.userIndex;
 
-    console.log("신고할 글 index: " + props.index);
-    console.log("신고할 아이디 : " + props.memberIndex);
-
       // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const { open, close, header} = props;
 
@@ -26,7 +23,6 @@ const AccuseModal= (props)=> {
                 close();
             }
         }catch(e){
-            console.log(e.response.data.code);
             if(e.response.data.code === 'RC002'){
                 alert("중복신고 되었습니다.");
                 close();

@@ -115,7 +115,6 @@ const Search = () =>{
             try{
                 const res = await MainApi.mainsearch(text)
                 if(res.data.statusCode === 200){
-                    console.log("성공")
                     setSearchData(res.data.results.content);
                     setIsFinish(true);
                     setNowLoading(false);

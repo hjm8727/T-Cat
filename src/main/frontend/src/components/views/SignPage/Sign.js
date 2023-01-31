@@ -247,7 +247,7 @@ function Sign() {
       if(e.response.data.statusCode === 400){
         alert(e.response.data.message)
       }else{
-        console.log("connection fail...");
+        console.log(e);
       }
     }
   }

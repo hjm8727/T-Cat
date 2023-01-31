@@ -143,15 +143,12 @@ function Detail() {
     
   const [reviewList, setReviewList] = useState([]);
 
-  // console.log(code);
-
   useEffect(() => {
     setPcode(code);
     const getData = async()=> {
       try {
         const res = await DetailApi.getDetail(pCode);
         if(res.data.statusCode === 200){
-          console.log(res.data.results.compact_list);
           // checkList 특정 요소의 유무 판단
           setCkList(res.data.results.check_list);
           setCastInfo(res.data.results.check_list.is_info_casting);
@@ -165,11 +162,9 @@ function Detail() {
           setCast(res.data.results.info_casting);
           // 예매 정보
           setDateList(res.data.results.calendar_list[0]);
-          console.log(res.data.results.calendar_list);
           setOpen(true);
         } else {
           alert("데이터 조회가 실패.")
-          console.log("에러...");
         }
       } catch (e) {
         console.log(e);

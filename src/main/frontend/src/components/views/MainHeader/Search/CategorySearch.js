@@ -135,13 +135,11 @@ const CategorySearch = () => {
                 if(ranking === 'rankingWeek'){
                     const res = await MainApi.rankingWeek(category, 20);
                     if(res.data.statusCode === 200){
-                        console.log("주간랭킹")
                         setSearchData(res.data.results)
                     }
                 }else if (ranking === 'rankingMonth'){
                     const res = await MainApi.rankingMonth(category, 20);
                     if(res.data.statusCode === 200){
-                        console.log("월간랭킹")
                         setSearchData(res.data.results)
                     }
                 }
@@ -156,7 +154,6 @@ const CategorySearch = () => {
         SearchAsync();
         window.localStorage.setItem("category" ,'')
     },[selectRanking,category,window.localStorage.getItem("category")])
-// console.log(SearchData);
     return(
         // 버튼영역
         <SearchContainer>

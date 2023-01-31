@@ -20,7 +20,6 @@ const WriteNotice=()=>{
                 navigate('/admin/noticeList')
             } 
         } catch(e){
-            console.log(e);
             if(e.response.data.statusCode === 400){
                 alert("제목과 내용을 입력해주세요")
             }else{

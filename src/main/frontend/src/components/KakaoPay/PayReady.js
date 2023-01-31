@@ -340,7 +340,6 @@ const PayReady = (title, total, tax, value) => {
           }
         } catch (e) {
           console.log(e);
-          console.log('에러!!!');
         }
       }
       cancelTry && canclelTry2 && payCancel();

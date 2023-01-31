@@ -16,8 +16,6 @@ const NoticeDetail=()=>{
         const res = await AdminApi.noticeDetail(params);
         if(res.data.statusCode === 200){
           setNoticeDetail(res.data.results);
-          console.log(res.data.results);
-          console.log(res.data.message);
         } else {
           alert("페이지 이동이 안됩니다.")
         }

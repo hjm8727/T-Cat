@@ -32,7 +32,6 @@ const UpdateNotice=()=>{
     const noticeData = async()=> {
       setLoading(true);
       try {
-        console.log("수정글의 index 값 :" + params); 
         const res = await AdminApi.noticeDetail(params);
         setInputTitle(res.data.results.title); // 작성한 제목 setinputtitle에 저장
         setInputDetail(res.data.results.content);

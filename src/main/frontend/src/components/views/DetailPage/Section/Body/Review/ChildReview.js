@@ -15,7 +15,6 @@ const ChildReview=(props)=>{
     const memberIndex = userInfo.userIndex;
     const loginMember = userInfo.userId; // 댓글 삭제시 작성 회원만 버튼 보이게
 
-    console.log(props.child_comment_list);
     const navigate = useNavigate();
 
     const [inputContent, setInputContent] = useState('');
@@ -29,7 +28,6 @@ const ChildReview=(props)=>{
     }
     // 댓글 삭제 
     const onClickDeleteReply=async(index)=>{
-      console.log("댓글 인덱스" + index);
       try{
         const res = await DetailApi.deleteComment(index, memberIndex);
         // 여기서 왜 index 값이 고유글 인덱스가 아니라 해당 글 index 번째 값 나옴 

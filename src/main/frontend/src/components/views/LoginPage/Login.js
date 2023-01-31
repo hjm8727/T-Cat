@@ -168,9 +168,6 @@ const IdStyle = styled.div`
         if(e.response.data.statusCode === 400){
           setIsShowId(false);
           alert(e.response.data.message);
-        }else{
-          console.log(e);
-          console.log('통신 오류...')
         }
       }
     }
@@ -213,13 +210,9 @@ const IdStyle = styled.div`
           setIsShowPwd(true);
         }
       } catch (e) {
-        console.log(e);
         if(e.response.data.statusCode === 400){
           setIsShowPwd(false);
           alert(e.response.data.message);
-        }else {
-          console.log(e);
-          console.log('통신 오류...')
         }
       }
     }
@@ -340,7 +333,6 @@ const IdStyle = styled.div`
         setOpen(false);
       } else {
         alert('탈퇴신청이 불가능한 상태입니다.');
-        console.log('error...');
       }
     }
 
@@ -349,7 +341,6 @@ const IdStyle = styled.div`
       try {
         const response = await MemberApi.login(inputId, inputPwd, providerType);
         if(response.data.statusCode === 200) {
-          console.log(response.data)
           switch(response.data.results.status) {
             case "ACTIVE" :
             const data = {
@@ -392,8 +383,6 @@ const IdStyle = styled.div`
         }
       } catch(e) {
         setLogin(true);
-        console.log(e);
-        console.log('오류');
       }
     }
   

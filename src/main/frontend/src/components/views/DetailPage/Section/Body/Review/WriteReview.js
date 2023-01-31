@@ -18,11 +18,8 @@ const WriteReview=(props)=>{
     const navigate = useNavigate();
 
     const onChangeRate =(e)=>{setRate(e);}
-    console.log("평점" + rate);
     const onChangeTitle=(e)=>{setInputTitle(e.target.value);}
     const onChangeContent=(e)=>{setInputContent(e.target.value);}
-
-    console.log("해당 공연 코드 : " + props.code);
 
     // 후기 작성
     const onClickSubmit=async()=>{

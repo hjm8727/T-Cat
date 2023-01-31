@@ -18,7 +18,6 @@ const MemberList=()=>{
   const handleSingleCheck = (checked, obj) => {
     if (checked) {
       setCheckItems(prev => [...prev, obj]);
-      console.log(obj);
     } else {
       // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
       setCheckItems(checkItems.filter((el) => el !== obj));
@@ -44,7 +43,6 @@ const MemberList=()=>{
         const res = await AdminApi.totalMember(currentPage, pageSize);
         if(res.data.statusCode === 200){
           setMemberList([...memberList, ...res.data.results.memberDTOList]);
-          console.log(setMemberList);
           // 페이징 시작
           setTotalCount(res.data.results.totalResults); 
           // db에서 잘라준 size 별로 잘랐을때 나온 페이지 수

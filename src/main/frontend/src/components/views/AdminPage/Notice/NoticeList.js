@@ -24,7 +24,6 @@ const NoticeList=()=>{
     if (checked) {
       // 단일 선택 시 체크된 아이템을 배열에 추가
       setCheckItems(prev => [...prev, obj]);
-      console.log(obj); // 아래에서 index 값을 받은거라 index 값 찍힘
     } else {
       // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
       setCheckItems(checkItems.filter((el) => el !== obj));
@@ -38,7 +37,6 @@ const NoticeList=()=>{
       const idArray = [];
       noticeList.forEach((el) => idArray.push(el.index));
       setCheckItems(idArray);
-      console.log(idArray);
     }
     else {
       setCheckItems([]);
@@ -53,7 +51,6 @@ const NoticeList=()=>{
         const res = await AdminApi.noticeInfo(currentPage, pageSize);
         if(res.data.statusCode === 200){
           setNoticeList([...noticeList, ...res.data.results.noticeDTOList]);
-          console.log(res.data.results);
           // 페이징 시작
           setTotalCount(res.data.results.totalResults); 
           // db에서 잘라준 size 별로 잘랐을때 나온 페이지 수
@@ -80,7 +77,6 @@ const NoticeList=()=>{
         navigate(0);
       } else {
         const res = await AdminApi.noticeCheck(checkItems);
-        console.log(checkItems);
         alert("공지가 삭제되었습니다.")
       }
       navigate(0);

@@ -28,7 +28,6 @@ const Inquiry=(props)=>{
       try {
         const res = await AdminApi.qnaList(currentPage, pageSize);
         if(res.data.statusCode === 200){
-          console.log(res.data.results);
           setQnaList([...qnaList, ...res.data.results.qnaDTOList]);
           // 페이징 시작
           setTotalCount(res.data.results.totalResults); 

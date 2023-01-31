@@ -21,7 +21,6 @@ const Banner=()=>{
             target: { files },
             } = e;
             const theFile = files[0];
-            console.log(theFile);
         
             const reader = new FileReader();
             reader.onloadend = (finishedEvent) => {
@@ -44,7 +43,6 @@ const Banner=()=>{
                 const response = await uploadString(attachmentRef, attachment, "data_url");
                 //storage 참조 경로에 있는 파일의 URL을 다운로드해서 attachmentUrl 변수에 넣어서 업데이트
                 attachmentUrl = await getDownloadURL(response.ref);
-                console.log(attachmentUrl);
                 getDownloadURL(response.ref).then((url)=>{
                     setImageList((prev)=>[...prev,url])
                     alert("업로드 성공");
@@ -56,19 +54,16 @@ const Banner=()=>{
     useEffect(()=>{
             const imageListReg=ref(storage,"image/");
             listAll(imageListReg).then((response)=>{
-                console.log(response);
                 response.items.forEach((item)=>{
                     getDownloadURL(item).then((url)=>{
                         setImageList((prev)=>[...prev,url])
                     })
                 })
             })
-            console.log("useEffect !!!")
         },[])
         
         const onSelecet = (e) =>{
             setAttachment(e)
-            console.log(attachment)
         }
         
         const onDelete = async () => {
@@ -76,13 +71,11 @@ const Banner=()=>{
             try {
                 if (attachment !== "") {
                     await deleteObject(urlRef);
-                    console.log("삭제성공");
                     alert("삭제 성공");
                     Navigate(0);
                 }
             } catch (error) {
                 window.alert("이미지를 삭제하는 데 실패했습니다!");
-                console.log("삭제실패");
             }
         }
 

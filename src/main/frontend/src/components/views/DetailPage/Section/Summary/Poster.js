@@ -45,7 +45,6 @@ function Poster(props) {
     const wishAddHandler = () => {
         setIsWishAdd(!isWishAdd)
     }
-console.log(props.rate);
     useEffect(() => {
         setPcode(props.code);
         round();
@@ -65,12 +64,10 @@ console.log(props.rate);
                 const res = await WishLikeApi.addWish(userInfo.userIndex, pCode);
                 if(res.data.statusCode === 200) {
                     setLike(true);
-                    console.log(res.data.message);
                 } else {
                     alert("에러 1")
                 }
             } catch (e) {
-                console.log(e);
                 if(e.response.data.statusCode === 400) {
                     alert("로그인 후 이용해주세요.")
                 } else {
@@ -95,7 +92,6 @@ console.log(props.rate);
             }
         }
     }
-    console.log(value);
 
 
     return (

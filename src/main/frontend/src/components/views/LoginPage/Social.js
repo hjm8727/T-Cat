@@ -137,14 +137,10 @@ function Social() {
 
     useEffect(() => {
         const AccInfo = location.search
-        console.log(AccInfo);
         let params = new URLSearchParams(AccInfo);
         setInputName(params.get('name'));
-        console.log(inputName)
         setInputEmail(params.get('email'));
-        console.log(inputEmail);
         setType(params.get('providerType'));
-        console.log(type);
         const email = params.get('email')
         const provider_type = params.get('providerType')
         const join = params.get('isJoin');
@@ -208,14 +204,6 @@ function Social() {
     setIsOpen(false);
     data.preventDefault();
     }
-
-    console.log(inputName);
-    console.log(inputEmail);
-    console.log(road);
-    console.log(jibun);
-    console.log(address);
-    console.log(postCode);
-    console.log(type);
 
     const onClickSign = async () => {
     try {
