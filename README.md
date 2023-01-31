@@ -1,80 +1,82 @@
-# KH Final Project - Backend
+# T-Cat
+<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white"/> 
 
----
+> 전국 공연 티켓 예매 
+> http://tcat.pe.kr  
 
-## 적용 기술 스택
-- <span style="color:green;font-size:15pt;font-weight:600">Spring Framework</span>
-  - <span style="color:green;font-size:15pt">Spring Boot<span>
-  - <span style="color:green;font-size:15pt">Spring Data JPA<span>
-  - <span style="color:green;font-size:15pt">Spring Security(예정)<span>
-- <span style="color:Orange;font-size:15pt;font-weight:600">Python</span>
-  - <span style="color:Orange;font-size:15pt">Crawling with Selenium</span>
-  - <span style="color:Orange;font-size:15pt">FlaskAPI(예정)</span>
-  - <span style="color:Orange;font-size:15pt">SqlAlchemy(예정)</span>
 
----
 
-## 초기 설정
+## 목차
 
-### 설치
+- [프로젝트 소개](#-stars---------)
+- [프로젝트 주요 기능](#-stars------------)
+- [ERD](#-stars--erd)
+- [팀원](#-stars----)
+- [개발 기간](#-stars-------)
+- [개발 환경](#-stars-------)
+- [업데이트 내역](#-stars---------)
+- [정보](#-stars----)
+- [빌드 전 사전 작업](#-stars------------)
+- [빌드](#-stars----)
 
----
+### 프로젝트 소개
+뮤지컬, 클래식/무용, 연극, 전시회 예매 사이트
 
-1. [스프링 부트 스타터 홈페이지 이동](https://start.spring.io/)
-2. 아래와 같이 설정
-<img width="1251" alt="khfinal_springbootstarter_option" src="https://user-images.githubusercontent.com/49019419/204407730-9b6126f9-320b-4aa2-a43c-616410b674e4.png">
+<img width="1267" alt="main capture" src="https://user-images.githubusercontent.com/110091878/215671956-c28ae8ea-8771-4de2-b2f7-371c41f0e4e2.png">
 
-```html
-Project: Gradle-Groovy
 
-Language: Java
+###  프로젝트 주요 기능
+- 회원이 명시적으로 작품 정보를 확인할 수 있도록 검색 서비스 제공
+- 주간/일간 랭킹을 통한 인기 공연 정보 제공
+- 일정에 따른 공연 정보 제공
+- Kakao Api를 활용한 로그인 시스템
+- KakaoPay Api를 활용한 결제 시스템
+- 관리자 페이지를 통한 매출 확인
+- 관리자가 게시물 관리 및 광고 등록 가능
+- 관리자 페이지를 통한 회원관리(블랙리스트)
+- 크롤링을 통한 웹 예매 정보 파싱
 
-Spring Boot: 2.7.6 (없다면 2.x.x 버전 중 선택)
+### ERD
+<img src="https://user-images.githubusercontent.com/110091878/215450277-51baef22-5940-4404-8840-f923eef7a1c6.png" width="800"></img>
 
-Project Metadata
-    Group: com.kh
-    Artifact: final-project
-    Name: final-project
-    Description: Spring Boot for Kh Final Project
-    Package name: com.kh.final-project
-    Packaging: Jar
-    Java: 11
+### 팀원
+- 하정목
+- 김성탁
+- 김승렬
+- 박하린
+- 지민
 
-Dependencies:
-    Spring Web
-    Spring Data JPA
-    Thymeleaf
-    Validation
-    Lombok
-    MySQL Driver
-    H2 Database
+### 개발 기간
+- 기획 : 2022.11.21 - 2022.12.02
+- 개발 : 2022.12.03 - 2022.12.26
+
+### :stars: 개발 환경
+- OS : Window 10
+- IDE : VS Code, IntelliJ
+- Language : Java, Javascript
+- FrontEnd : HTML/CSS
+- Library : ReactJS
+- DB : mySql
+- Server : Tomcat
+
+### 업데이트 내역
+  
+### 정보
+
+### 빌드 전 사전 작업
+
+
+### 빌드
+
+```sh
+./gradlew build
+```
+```sh
+java -jar build/libs/final-project-0.0.1-SNAPSHOT.jar
 ```
 
-3. 다운받아 압축파일 해제한 후 `IntelliJ`로 해당 프로젝트 열기
 
-### 프로젝트 설정
 
----
 
-> 아래 설명은 모두 `macOS`를 기준으로 설명했습니다.
 
-1. `Preferences` 기준 <br><br>
 
-   1. Annotation Processor 활성화 (롬북 활성화)
-      ![khfinal_intellij_preferences](https://user-images.githubusercontent.com/49019419/204409241-634a378b-e41c-4bb3-8b7f-d1e995c12a9d.png)
-      `Preferences`에서 `annotation processor` 검색 후 체크박스 활성화<br><br>
-      
-   2. File Encoding 변경 (*.properties 인코딩)
-      ![khfinal-2_intellij_preferences](https://user-images.githubusercontent.com/49019419/204409311-c90fa838-4a0a-47d1-9897-34123cb13214.png)
-        `Preferences`에서 `file encoding` 검색 후 <br>`Default encoding for properties files` 변경<br><br>
-
-   3. Gradle 환경 변경 (IntelliJ가 더 빠르다)
-      ![khfinal-3_intellij_preferences](https://user-images.githubusercontent.com/49019419/204409373-0d719233-7a71-45d4-9991-f18272d2670f.png)
-        `Preferences`에서 `Build and run using`, `Run tests using`을<br>`Gradle` -> `IntelliJ IDEA`로 변경<br><br>
-   
-
-2. `gitignore` 설정
-   1. 아래 문구 추가 (설정 파일 제외 (*.properties, *.yml))
-   
-      `**/src/main/resources/*.properties`<br>
-      `**/src/main/resources/*.yml`
